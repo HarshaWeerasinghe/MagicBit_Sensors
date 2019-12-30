@@ -591,3 +591,8 @@ Connect the Temperature & Humidity sensor to the Magicbit via left upper connect
 
 10.5 Coding
 ===============
+
+
+
+
+[8]
