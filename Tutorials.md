@@ -40,29 +40,25 @@ You can get outputs using serial monitor.
 1.5 Coding
 ***************
 
+const int IRpin = 32;
+void setup() {
+  Serial.begin(9600);
+  pinMode (IRpin, INPUT);
+}
+void loop() {
+  Serial.println(analogRead(IRpin));
+  delay(100);
+}
 
 
+**Outputs: Serial monitor
 
 
-
-
-
-Outputs: Serial monitor
  
 Figure 1: Serial output when faced a black surface
 
-
-
-
-
-
-
-
-
-
-
-
 1.6 Explanation
+****************
 
 Const int: Defining input pin.
 Serial.begin(9600): Setting baud rate.
