@@ -57,7 +57,7 @@ void loop() {
 
 **Outputs: Serial monitor**
 
- 
+![alt text] 
 Figure 1: Serial output when faced a black surface
 
 
