@@ -1,10 +1,10 @@
 
 Magicbit Sensors
-=================
+#################
 
---------------------
 01. Proximity Sensor
---------------------
+====================
+
 1.1 Introduction
 ----------------
 In this example, you are learning how to use proximity sensor. This sensor (TCRT5000) uses reflection on a surface theory to working. From a white and polished surface reflects large percentage of light and from a black and rough surface absorbs (not reflect) large percentage of light that incidence on the surface.
