@@ -1,45 +1,48 @@
+=================
+Magicbit Sensors
+=================
 
-**Magicbit Sensors**
-====================
 
 01. Proximity Sensor
 ====================
 
 1.1 Introduction
-----------------
+-----------------
 In this example, you are learning how to use proximity sensor. This sensor (TCRT5000) uses reflection on a surface theory to working. From a white and polished surface reflects large percentage of light and from a black and rough surface absorbs (not reflect) large percentage of light that incidence on the surface.
 
-Learning outcomes:
-------------------
+**Learning outcomes:**
+
 •	Reflection theory using with Infrared radiations.
 •	Turning physical parameter to an analog electric signal.
 
 1.2 Components
-===============
+---------------
+
 •	Magicbit
 •	Magicbit proximity sensor
 
 1.3 Theory
-===============
+-----------
 
 A proximity sensor is a sensor able to detect the presence of nearby objects without any physical contact. A proximity sensor often emits an electromagnetic field or a beam of electromagnetic radiation (infrared, for instance), and looks for changes in the field or return signal.
 
-Features:
------------------- 
+**Features:**
+ 
 •	Supply voltage 3.3V ~ 5V
 •	Detect distance 1mm ~ 8mm
 
 
 1.4 Methodology
-===============
+----------------
 
-As the first step, you should connect a Magicbit proximity sensor to Magicbit core board. For this you can use one side connector from four side connectors of the Magicbit core board or if you want to extend the length the connection you can use jumper wires.
-For this example, the proximity sensor was connected to the upper left connector of the Magicbit core board.
-Then connect the Magicbit to your pc and upload the code.
-You can get outputs using serial monitor.
+1. As the first step, you should connect a Magicbit proximity sensor to Magicbit core board. For this you can use one side connector from four side connectors of the Magicbit core board or if you want to extend the length the connection you can use jumper wires.
+
+2. For this example, the proximity sensor was connected to the upper left connector of the Magicbit core board.
+
+3. Then connect the Magicbit to your pc and upload the code. You can get outputs using serial monitor.
 
 1.5 Coding
-===============
+-----------
 
 
 
@@ -55,36 +58,34 @@ Figure 1: Serial output when faced a black surface
 1.6 Explanation
 ================
 
-Const int: Defining input pin.
-Serial.begin(9600): Setting baud rate.
-analogRead: Read the data input of configured data pin.
+**Const int:** Defining input pin.
+
+**Serial.begin(9600):** Setting baud rate.
+
+**analogRead:** Read the data input of configured data pin.
 
 
 
 
-
-
-
-***************
 02. Tilt Sensor
-***************
+================
 
 2.1 Introduction
-===============
+-----------------
 In this example, you are learning how to use Tilt sensor. Tilt sensor produces digital outputs such as high and low. Therefore, tilt sensor works as a switch that gives on and off states.
 
-Learning outcomes
-------------------
+**Learning outcomes**
+
 •	Digital reads and print them on serial monitor
 •	Working principle of the tilt sensor
 
 2.2 Components
-===============
+--------------
 •	Magicbit 
 •	Magicbit Tilt Sensor
 
 2.3 Theory
-===============
+-----------
 
 When the device gets power and is in its upright position, then the rolling ball settle at the bottom of the sensor to form an electrical connection between the two end terminals of the sensor.
 
@@ -93,8 +94,8 @@ When the device gets power and is in its upright position, then the rolling ball
 Figure 3: Working priciple of tilt sensor [1]
 
 2.4 Methodology
+----------------
 
-===============
 As the first step, you should connect a Magicbit tilt sensor to Magicbit core board. For this, you can use one side connector from four side connectors of the Magicbit core board or if you want to extend the length the connection, you can use jumper wires.
 For this example, the tilt sensor was connected to the upper left connector of the Magicbit core board.
 Then connect the Magicbit to your pc and upload the code.
@@ -105,7 +106,7 @@ You can get outputs using serial monitor.
 
 
 2.5 Coding
-===============
+-----------
 
 
 
@@ -115,7 +116,7 @@ You can get outputs using serial monitor.
 
 
 
-Outputs: Serial monitor
+**Outputs: Serial monitor**
  
 Figure 4: High state of the tilt sensor
  
@@ -124,36 +125,37 @@ Figure 5: Low state of the tilt sensor
 
 
 2.6 Explanation
-===============
+----------------
 
 Const int TILTpin: Defining input pin
 digitalRead: Read the data input of configured data pin.
 
-***************
+
 03. Flame Sensor
-***************
+================
 
 3.1 Introduction
-=================
+-----------------
 
 A flame sensor module that consists of a flame sensor (IR receiver), resistor, capacitor, potentiometer, and comparator LM393 in an integrated circuit. It can detect infrared light with a wavelength ranging from 700nm to 1000nm.
 
-Learning outcomes:
-------------------
+**Learning outcomes:**
+
 •	Using flame sensor for identify infrareds/heat bodies
 
 3.2 Components
-===============
+---------------
+
 •	Magicbit
 •	Magicbit Flame Sensor
 
 3.3 Theory
-===============
+-----------
 
 IR receiver mainly use with a IR Transmitter, not only for identify heat bodies. IR light is emitted by the sun, light bulbs, and anything else that produces heat. That means there is a lot of IR light noise all around us. To prevent this noise from interfering with the IR signal, a signal modulation technique is used. In IR signal modulation, an encoder on the IR remote converts a binary signal into a modulated electrical signal. This electrical signal is sent to the transmitting LED. The transmitting LED converts the modulated electrical signal into a modulated IR light signal. The IR receiver then demodulates the IR light signal and converts it back to binary before passing on the information to a microcontroller.In here we use this sensor for identify flames.
 
 3.4 Methodology
-===============
+----------------
 
 As the first step, you should connect a Magicbit flame sensor to Magicbit core board. For this, you can use one side connector from four side connectors of the Magicbit core board or if you want to extend the length the connection, you can use jumper wires.
 For this example, the flame sensor was connected to the upper left connector of the Magicbit core board.
@@ -161,7 +163,7 @@ Then connect the Magicbit to your pc and upload the code.
 You can get outputs using serial monitor.
 
 3.5 Coding
-===============
+-----------
 
 
 
@@ -172,7 +174,7 @@ You can get outputs using serial monitor.
 
 
 3.6 Explanation
-===============
+----------------
 
 Here we give an analogRead. That because we have to measure a range to take a decision that is there a flame or not.
 
@@ -192,42 +194,32 @@ Here we give an analogRead. That because we have to measure a range to take a de
 
 
 
-***************
 04. DOOR Sensor
-***************
+================
 
 4.1 Introduction
-===============
+-----------------
 
 A magnetic contact switch is a reed switch encased in a plastic shell so that you can easily apply them in a door, a window or a drawer to detect if the door is open or closed.
-Learning outcomes:
-------------------
+
+**Learning outcomes:**
+
 •	Using magnetic door sensor.
 
-4.2Components
-===============
-
+4.2 Components
+---------------
 
 •	Magicbit
 •	Magicbit Magnetic door sensor
 
 4.3 Theory
-===============
+----------
 
 Almost all door and window sensors use a "reed switch" to determine when a protected area has been breached.  A reed switch consists of a set of electrical connectors placed slightly apart. When a magnetic field is placed parallel to the electrical connectors, it pulls them together, closing the circuit. Door sensors have one reed switch and one magnet, creating a closed circuit. If someone opens an armed door or window, the magnet is pulled away from the switch, which breaks the circuit and triggers an event.  [2]
 
 
-
-
-
-
-
-
-
-
-
 4.4 Methodology
-===============
+----------------
 
 First, take the Magicbit door sensor and connect it with the Magicbit core. In this example, we use 32th pin of Magicbit for implement this. After connect the door sensor upload following code for your Magicbit.
 Then open your serial monitor in your Arduino IDE and see outputs while changing the door sensor module.
@@ -236,8 +228,9 @@ Figure 7: Door open state
  
 Figure 8: Door closed state
 
+
 4.5 Coding
-===============
+-----------
 
 
 
@@ -248,51 +241,41 @@ Figure 8: Door closed state
 
 
 4.6 Explanation
-===============
+----------------
 
-DOORpin: Defined input pin for door sensor
+**DOORpin:** Defined input pin for door sensor
 
 
 
-*******************
+
 05. Magicbit Servo
-*******************
+==================
 
 5.1 Introduction
-===============
+----------------
 
 A servomotor is an electrical device, which can push or rotate an object with great precision. If you want to rotate and object at some specific angles or distance, then you use servomotor. It is just made up of simple motor, which run through servomechanism.
 
-Leaning outcome:
-------------------
+**Leaning outcome:**
+
 •	Using servo motor with Magicbit
 
 5.2 Components
-===============
+---------------
 
 •	Magicbit
 •	Servomotor
 
 5.3 Theory
-===============
+-----------
 
 Servo motor works on the PWM (Pulse Width Modulation) principle, which means its angle of rotation, is controlled by the duration of pulse applied to its control PIN. Servomotor is made up of DC motor, which is controlled by a variable resistor (potentiometer), and some gears. Servomotors control position and speed very precisely. Now a potentiometer can sense the mechanical position of the shaft. Hence, it couples with the motor shaft through gears. The current position of the shaft is converted into electrical signal by potentiometer, and is compared with the command input signal. In modern servomotors, electronic encoders or sensors sense the position of the shaft.
 A pulse of 1ms will move the shaft anticlockwise at -90 degree, a pulse of 1.5ms will move the shaft at the neutral position that is 0 degree and a pulse of 2ms will move shaft clockwise at +90 degree. [3]
 
 
 
-
-
-
-
-
-
-
-
-
-
 5.4 Methodology
-===============
+---------------
 
 For implement this project ESP32Servo library should be installed. Click here to download ESP32Servo library. Then install the library for Arduino IDE.
 Follow these steps to install ESP32Servo library.
@@ -306,20 +289,13 @@ Then connect the magic servo motor t magic bit.
 After completed those steps, upload following code for your Magicbit.
 
 5.5 Coding
-===============
-
-
-
-
-
-
-
+-----------
 
 
 
 
 5.6 Explanation
-===============
+---------------
 
 Servo MagicServo: We should create an object in program for define the servomotor
 MagicServo.attach: ‘attach’ means define which pin of the Magicbit connects to the servomotor.
@@ -547,14 +523,15 @@ Then connect the Magicbit to your pc and upload the code below.
 ===============
 
 ‘output_value = map(output_value, 550,0, 0,100)’  - output_value is an user defined variable. For display a moisture percentage we should map the analog output value of the sensor given according to the sample (the wet soil mixture).
-Fro serial monitor we can get our outputs.
+From serial monitor we can get our outputs.
 
-***********************************
+
+************************************
 10. Temperature and Humidity Sensor
-***********************************
+************************************
 
 10.1 Introduction
-===============
+=================
 A humidity sensor (or hygrometer) senses, measures and reports both moisture and air temperature. The ratio of moisture in the air to the highest amount of moisture at a particular air temperature is called relative humidity. Relative humidity becomes an important factor when looking for comfort.
 
 Learning outcomes:
@@ -574,12 +551,11 @@ The DHT11 detects water vapor by measuring the electrical resistance between two
 The DHT11 measures temperature with a surface mounted NTC temperature sensor (thermistor) built into the unit. [7]
 
 10.4 Methodology
-===============
+================
 
 First, you have to download and install library for DHT11. For more details and download the library 
 Click here
 Connect the Temperature & Humidity sensor to the Magicbit via left upper connector (D32). Then connect the Magicbit to your pc and upload the following code.
 
 10.5 Coding
-===============
-
+===========
