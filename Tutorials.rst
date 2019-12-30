@@ -57,7 +57,7 @@ void loop() {
 
 **Outputs: Serial monitor**
 
-![alt text] 
+![alt text](https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TCRT5000/surface_black.png?raw=true) 
 Figure 1: Serial output when faced a black surface
 
 
