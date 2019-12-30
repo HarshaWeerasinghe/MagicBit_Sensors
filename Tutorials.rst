@@ -56,7 +56,7 @@ Figure 1: Serial output when faced a black surface
 
 
 1.6 Explanation
-================
+---------------
 
 **Const int:** Defining input pin.
 
@@ -306,41 +306,32 @@ For loop: In here, we use for loop to incrementing loop action. Because of this 
 *******************
 
 6.1 Introduction
-=================
+----------------
 
 A motion sensor (or motion detector) is an electronic device that is designed to detect and measure movement. Motion sensors are used primarily in home and business security systems. PIR Sensor is short for passive infrared sensor, which applies for projects that need to detect human or particle movement in a certain range, and it can be referred as PIR (motion) sensor, or IR sensor. [4]
-Learning outcomes:
-------------------
+
+**Learning outcomes:**
+
 •	Using motion sensor
 •	Theoretical background of using Infrared waves in motion sensor
 
 6.2 Components
-==============
+---------------
 •	Magicbit
 •	Magicbit Motion sensor
 
 6.3 Theory
-===============
+------------
 
 When a human or animal body will get in the range of the sensor, it will detect a movement because the human or animal body emits heat energy in a form of infrared radiation. That is where the name of the sensor comes from, a Passive Infra-Red sensor. In addition, the term “passive” means that sensor is not using any energy for detecting purposes; it just works by detecting the energy given off by the other objects.
 
-
-
-
-
-
-
-
-
-
-
 6.4 Methodology
-===============
+---------------
 
 First, connect the motion sensor to your Magicbit and upload the following code to your Magicbit. In this demonstration like other demonstrations, we use D32 as the data pin.
 
 6.5 Coding
-===============
+------------
 
 
 
@@ -350,51 +341,48 @@ First, connect the motion sensor to your Magicbit and upload the following code 
 
 
 6.6 Explanation
-===============
+----------------
 
 When some human being detected by the motion sensor, which is in the range of the sensor, the output of the serial monitor, will be displayed ‘1’. If not there will be displayed ‘0’.
 
 
-***************
+
 07. RGB Module
-***************
+===============
 
 7.1 Introduction
-===============
+-----------------
 
 An RGB LED has 4 pins, one for each color (Red, Green, Blue) and a common cathode. It has three different color-emitting diodes that can be combined to create all sorts of color.
 R- Red
 G- Green
 B- Blue
-Learning outcomes:
-------------------
+
+**Learning outcomes:**
+
 •	Using a RGB led and changing its color as the required
 
 7.2 Components
-===============
+---------------
+
 •	Magicbit
 •	RGB module
 
 7.3 Theory
-===============
+------------
 
 The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue.
 The main purpose of the RGB color model is for the sensing, representation, and display of images in electronic systems, such as televisions and computers, though it has also been used in conventional photography. Before the electronic age, the RGB color model already had a solid theory behind it, based in human perception of colors [5].
 
 7.4 Methodology
-===============
+----------------
 
 For this demonstration, you have to install Adafruit NeoPixel library. For more details Click here.
 As usually connect the RGB module to your Magicbit, for this, we take data pin as pin 32.
 After connect the RGB module to the Magicbit, connect it to your pc and upload following code.
 
 7.5 Coding
-===============
-
-
-
-
-
+-----------
 
 
 
@@ -405,33 +393,34 @@ After connect the RGB module to the Magicbit, connect it to your pc and upload f
 
 
 7.6 Explanation
-===============
+----------------
 
 Adafruit NeoPixel library is for LED strips. However, it can be used for single RGB LED as your requirement (like this example).
 ‘LED.begin & LED.show’ are functions of Adafruit NeoPixel library for display the color on RGB led.
 ‘LED.setPixelColor’ is use to color led brightness values. (Eg:- 255 – maximum brightness & 0 – lowest brightness)
 
-***************
+
 08. Magnetic Sensor
-***************
+====================
 
 8.1 Introduction
+-----------------
  Magnetic sensors are able to detect magnetic fields and process this information. The outcome on the position, angle and strength (Hall Effect) or the direction (Magneto Resistive) of an applied magnetic field can be converted into specific output signals.
 
-Learning outcomes:
-------------------
+**Learning outcomes:**
+
 •	Using Hall Effect sensor and detect magnetic fields.
 •	Applications of Hall Effect Sensor
 
 
 8.2 Components
-===============
+---------------
 •	Magicbit
 •	Soil Moisture Sensor
 
 
 8.3 Theory
-===============
+------------
 
 There are actually, two different types of Hall sensors one is Digital Hall sensor and the other is Analog Hall sensor. The digital Hall sensor can only detect if a magnet is present or not (0 or 1) but an analog hall sensor’s output varies based on the magnetic field around the magnet that is it can detect how strong or how far the magnet is. In this project will aim only at the digital Hall sensors for they are the most commonly used ones. [6]
 
@@ -448,7 +437,7 @@ In a Hall Effect sensor, a thin strip of metal has a current applied along it. I
 
 
 8.4 Methodology
-===============
+----------------
 
 Connect the magnetic sensor to the Magicbit. For this demonstration, we connect the magnetic sensor to D32 pin of the Magicbit.
 After connect the magnetic sensor to the Magicbit connect it to your pc and upload the code below.
@@ -459,7 +448,7 @@ After connect the magnetic sensor to the Magicbit connect it to your pc and uplo
 
 
 8.5 Coding
-===============
+-----------
 
 
 
@@ -470,43 +459,45 @@ After connect the magnetic sensor to the Magicbit connect it to your pc and uplo
 
 
 8.6 Explanation
-===============
+----------------
 
 This Magnetic sensor gives digital outputs. Therefor you can open the serial monitor and see the outputs.
 ‘1’ for occurred a magnetic field near to the sensor
 ‘0’ for there is no any considerable magnetic field near by the sensor
 
-************************
+
 9.0 Soil Moisture Sensor
-************************
+========================
 
 9.1 Introduction
-===============
+-----------------
 Soil moisture sensors typically refer to sensors that estimate volumetric water content. Another class of sensors measure another property of moisture in soils called water potential; these sensors are usually referred to as soil water potential sensors and include tensiometers and gypsum blocks.
-Learning outcomes:
-------------------
+
+**Learning outcomes:**
+
 •	Using Soil moisture sensor and implement its applications
 •	Working principal of soil moisture sensor
 
 9.2 Components
-===============
+--------------
+
 •	Magicbit
 •	Soil Moisture Sensor
 
 9.3 Theory
-===============
+-----------
 
 Soil Moisture Sensor. Soil moisture is basically the content of water present in the soil. This can be measured using a soil moisture sensor which consists of two conducting probes that act as a probe. It can measure the moisture content in the soil based on the change in resistance between the two conducting plates.
 
 9.4 Methodology
-===============
+---------------
 
 Connect the soil moisture sensor to the Magicbit. As usually in here also we connect sensor module to the upper left (D32) connector on the Magicbit.
 After connect the sensor module put it in to a wet soil mixture for get results.
 Then connect the Magicbit to your pc and upload the code below.
 
 9.5 Coding 
-===============
+-----------
 
 
 
@@ -520,42 +511,44 @@ Then connect the Magicbit to your pc and upload the code below.
 
 
 9.6 Explanation
-===============
+----------------
 
 ‘output_value = map(output_value, 550,0, 0,100)’  - output_value is an user defined variable. For display a moisture percentage we should map the analog output value of the sensor given according to the sample (the wet soil mixture).
 From serial monitor we can get our outputs.
 
 
-************************************
+
 10. Temperature and Humidity Sensor
-************************************
+====================================
 
 10.1 Introduction
-=================
+------------------
+
 A humidity sensor (or hygrometer) senses, measures and reports both moisture and air temperature. The ratio of moisture in the air to the highest amount of moisture at a particular air temperature is called relative humidity. Relative humidity becomes an important factor when looking for comfort.
 
-Learning outcomes:
-------------------
+**Learning outcomes:**
+
 •	Using DHT11 sensor and getting outputs of temperature and humidity
 •	Apply Temperature & Humidity sensor in projects
 
 10.2 Components
-===============
+----------------
+
 •	Magicbit
 •	Temperature and Humidity Sensor
 
 10.3 Theory
-===============
+-----------
 
 The DHT11 detects water vapor by measuring the electrical resistance between two electrodes. The humidity-sensing component is a moisture holding substrate with electrodes applied to the surface. When water vapor is absorbed by the substrate, ions are released by the substrate, which increases the conductivity between the electrodes. The change in resistance between the two electrodes is proportional to the relative humidity. Higher relative humidity decreases the resistance between the electrodes, while lower relative humidity increases the resistance between the electrodes.
 The DHT11 measures temperature with a surface mounted NTC temperature sensor (thermistor) built into the unit. [7]
 
 10.4 Methodology
-================
+-----------------
 
 First, you have to download and install library for DHT11. For more details and download the library 
 Click here
 Connect the Temperature & Humidity sensor to the Magicbit via left upper connector (D32). Then connect the Magicbit to your pc and upload the following code.
 
 10.5 Coding
-===========
+------------
