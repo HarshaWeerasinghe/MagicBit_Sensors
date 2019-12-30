@@ -1,6 +1,6 @@
 
-Magicbit Sensors
-#################
+**Magicbit Sensors**
+====================
 
 01. Proximity Sensor
 ====================
