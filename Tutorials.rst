@@ -61,6 +61,12 @@ void loop() {
 
 Figure 1: Serial output when faced a black surface
 
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TCRT5000/surface_white.png?raw=true
+
+
+Figure 2: Serial output when faced a white surface
+
+
 
 
 1.6 Explanation
