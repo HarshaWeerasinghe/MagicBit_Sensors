@@ -109,18 +109,20 @@ Then connect the Magicbit to your pc and upload the code.
 You can get outputs using serial monitor.
 
 
-
-
-
 2.5 Coding
 -----------
+.. code-block:: c
+const int TILTpin = 32;
 
+void setup() {
+  Serial.begin(9600);
+  pinMode (TILTpin, INPUT);
+}
 
-
-
-
-
-
+void loop() {
+  Serial.println(digitalRead(TILTpin));
+  delay(100);
+}
 
 
 **Outputs: Serial monitor**
@@ -134,8 +136,8 @@ Figure 5: Low state of the tilt sensor
 2.6 Explanation
 ----------------
 
-Const int TILTpin: Defining input pin
-digitalRead: Read the data input of configured data pin.
+**Const int TILTpin:** Defining input pin
+**digitalRead:** Read the data input of configured data pin.
 
 
 03. Flame Sensor
@@ -171,34 +173,23 @@ You can get outputs using serial monitor.
 
 3.5 Coding
 -----------
+.. code-block:: c
+const int FLAMEpin = 32;
 
+void setup() {
+  Serial.begin(9600);
+  pinMode (FLAMEpin, INPUT);
+}
 
-
-
-
-
-
+void loop() {
+  Serial.println(analogRead(FLAMEpin));
+  delay(100);
+}
 
 
 3.6 Explanation
 ----------------
-
 Here we give an analogRead. That because we have to measure a range to take a decision that is there a flame or not.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 04. DOOR Sensor
@@ -238,21 +229,23 @@ Figure 8: Door closed state
 
 4.5 Coding
 -----------
+.. code-block:: c
+const int DOORpin = 32;
 
+void setup() {
+  Serial.begin(9600);
+  pinMode (DOORpin, INPUT);
+}
 
-
-
-
-
-
-
+void loop() {
+  Serial.println(digitalRead(DOORpin));
+  delay(100);
+}
 
 4.6 Explanation
 ----------------
 
 **DOORpin:** Defined input pin for door sensor
-
-
 
 
 05. Magicbit Servo
@@ -297,16 +290,29 @@ After completed those steps, upload following code for your Magicbit.
 
 5.5 Coding
 -----------
+.. code-block:: c
+#include <ESP32Servo.h>
 
+Servo MagicServo;
 
+void setup() {
+MagicServo.attach(32);
+  }
+
+void loop( ) {
+ for(int i=0; i<=180; i++){
+  MagicServo.write(i);
+  delay(10);
+  }
+}
 
 
 5.6 Explanation
 ---------------
 
-Servo MagicServo: We should create an object in program for define the servomotor
-MagicServo.attach: ‘attach’ means define which pin of the Magicbit connects to the servomotor.
-For loop: In here, we use for loop to incrementing loop action. Because of this the servomotor increments its angle 0 to 180 and after complete this action reset to the start position. This action is continued repeatedly inside the ‘for loop’.
+**Servo MagicServo:** We should create an object in program for define the servomotor
+**MagicServo.attach:** ‘attach’ means define which pin of the Magicbit connects to the servomotor.
+**For loop:** In here, we use for loop to incrementing loop action. Because of this the servomotor increments its angle 0 to 180 and after complete this action reset to the start position. This action is continued repeatedly inside the ‘for loop’.
 
 *******************
 06. Motion Sensor
@@ -339,12 +345,15 @@ First, connect the motion sensor to your Magicbit and upload the following code 
 
 6.5 Coding
 ------------
-
-
-
-
-
-
+.. code-block:: c
+int MOTIONsensor =32;
+void setup() {
+  pinMode(MOTIONsensor, INPUT);
+  Serial.begin(9600);
+}
+void loop() {
+  Serial.println(digitalRead(MOTIONsensor));
+}
 
 
 6.6 Explanation
@@ -390,13 +399,23 @@ After connect the RGB module to the Magicbit, connect it to your pc and upload f
 
 7.5 Coding
 -----------
+.. code-block:: c
+#include <Adafruit_NeoPixel.h>
+#define LED_PIN  32
+#define LED_COUNT 1
 
+Adafruit_NeoPixel LED(1,32, NEO_RGB + NEO_KHZ800);
 
+void setup() {
+  LED.begin();
+  LED.show();
+}
 
+void loop() {
+  LED.setPixelColor(0, 255, 0, 255); // you can change these arguments and make your own designs using those commands. Follow the link in our documentary for more details.
+  LED.show();
 
-
-
-
+}
 
 
 7.6 Explanation
@@ -433,16 +452,6 @@ There are actually, two different types of Hall sensors one is Digital Hall sens
 
 In a Hall Effect sensor, a thin strip of metal has a current applied along it. In the presence of a magnetic field, the electrons in the metal strip are deflected toward one edge, producing a voltage gradient across the short side of the strip (perpendicular to the feed current). 
 
-
-
-
-
-
-
-
-
-
-
 8.4 Methodology
 ----------------
 
@@ -450,19 +459,19 @@ Connect the magnetic sensor to the Magicbit. For this demonstration, we connect 
 After connect the magnetic sensor to the Magicbit connect it to your pc and upload the code below.
 
 
-
-
-
-
 8.5 Coding
 -----------
+.. code-block:: c
+#define MAGNETICsensor 32
 
-
-
-
-
-
-
+void setup() {
+  Serial.begin(9600);
+  pinMode(32, INPUT);
+}
+void loop() {
+  Serial.println(digitalRead(MAGNETICsensor));
+  delay(100);
+}
 
 
 8.6 Explanation
@@ -505,22 +514,28 @@ Then connect the Magicbit to your pc and upload the code below.
 
 9.5 Coding 
 -----------
+.. code-block:: c
+int SENSOR = 32;
+int output_value ;
 
-
-
-
-
-
-
-
-
-
-
+void setup() {
+   Serial.begin(9600);
+   Serial.println("Reading From the Sensor ...");
+   delay(2000);
+}
+void loop() {
+   output_value= analogRead(SENSOR);
+   output_value = map(output_value,550,0,0,100);
+   Serial.print("Mositure : ");
+   Serial.print(output_value);
+   Serial.println("%");
+   delay(1000);
+}
 
 9.6 Explanation
 ----------------
 
-‘output_value = map(output_value, 550,0, 0,100)’  - output_value is an user defined variable. For display a moisture percentage we should map the analog output value of the sensor given according to the sample (the wet soil mixture).
+**‘output_value = map(output_value, 550,0, 0,100)’**  - output_value is an user defined variable. For display a moisture percentage we should map the analog output value of the sensor given according to the sample (the wet soil mixture).
 From serial monitor we can get our outputs.
 
 
@@ -559,3 +574,42 @@ Connect the Temperature & Humidity sensor to the Magicbit via left upper connect
 
 10.5 Coding
 ------------
+.. code-block:: c
+#include "DHT.h"
+#define DHTPIN 32
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println(F("DHTxx test!"));
+  dht.begin();
+}
+void loop() {
+  delay(2000);
+
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  float f = dht.readTemperature(true);
+
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
+
+  float hif = dht.computeHeatIndex(f, h);
+  float hic = dht.computeHeatIndex(t, h, false);
+
+  Serial.print(F("Humidity: "));
+  Serial.print(h);
+  Serial.print(F("%  Temperature: "));
+  Serial.print(t);
+  Serial.print(F("°C "));
+  Serial.print(f);
+  Serial.print(F("°F  Heat index: "));
+  Serial.print(hic);
+  Serial.print(F("°C "));
+  Serial.print(hif);
+  Serial.println(F("°F"));
+}
+
