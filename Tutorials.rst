@@ -103,6 +103,7 @@ In this example, you are learning how to use Tilt sensor. Tilt sensor produces d
 
 When the device gets power and is in its upright position, then the rolling ball settle at the bottom of the sensor to form an electrical connection between the two end terminals of the sensor.
 
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TiltSensor/43.jpg?raw=true
 
  
 Figure 3: Working priciple of tilt sensor [1]
@@ -133,8 +134,12 @@ void loop() {
 
 
 **Outputs: Serial monitor**
- 
+ .. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TiltSensor/Screenshot_1.png?raw=true
+
 Figure 4: High state of the tilt sensor
+
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TiltSensor/Screenshot_2.png?raw=true
+
  
 Figure 5: Low state of the tilt sensor
 
@@ -196,7 +201,7 @@ void loop() {
 
 3.6 Explanation
 ----------------
-Here we give an analogRead. That because we have to measure a range to take a decision that is there a flame or not.
+Here we give an **analogRead**. That because we have to measure a range to take a decision that is there a flame or not.
 
 
 04. DOOR Sensor
@@ -222,6 +227,10 @@ A magnetic contact switch is a reed switch encased in a plastic shell so that yo
 
 Almost all door and window sensors use a "reed switch" to determine when a protected area has been breached.  A reed switch consists of a set of electrical connectors placed slightly apart. When a magnetic field is placed parallel to the electrical connectors, it pulls them together, closing the circuit. Door sensors have one reed switch and one magnet, creating a closed circuit. If someone opens an armed door or window, the magnet is pulled away from the switch, which breaks the circuit and triggers an event.  [2]
 
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/DoorSensor/entry_sensor_reed_switch_small.png?raw=true
+
+Figure 6: Working principal of magnetic door sensor
+
 
 4.4 Methodology
 ----------------
@@ -229,7 +238,12 @@ Almost all door and window sensors use a "reed switch" to determine when a prote
 First, take the Magicbit door sensor and connect it with the Magicbit core. In this example, we use 32th pin of Magicbit for implement this. After connect the door sensor upload following code for your Magicbit.
 Then open your serial monitor in your Arduino IDE and see outputs while changing the door sensor module.
  
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TiltSensor/Screenshot_1.png?raw=true
+
 Figure 7: Door open state
+
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/TiltSensor/Screenshot_2.png?raw=true
+
  
 Figure 8: Door closed state
 
@@ -279,6 +293,10 @@ A servomotor is an electrical device, which can push or rotate an object with gr
 Servo motor works on the PWM (Pulse Width Modulation) principle, which means its angle of rotation, is controlled by the duration of pulse applied to its control PIN. Servomotor is made up of DC motor, which is controlled by a variable resistor (potentiometer), and some gears. Servomotors control position and speed very precisely. Now a potentiometer can sense the mechanical position of the shaft. Hence, it couples with the motor shaft through gears. The current position of the shaft is converted into electrical signal by potentiometer, and is compared with the command input signal. In modern servomotors, electronic encoders or sensors sense the position of the shaft.
 A pulse of 1ms will move the shaft anticlockwise at -90 degree, a pulse of 1.5ms will move the shaft at the neutral position that is 0 degree and a pulse of 2ms will move shaft clockwise at +90 degree. [3]
 
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/Servo/Untitled-2-300x206.png?raw=true
+
+Figure 9:PWM Signals for various angles
+
 
 
 5.4 Methodology
@@ -287,7 +305,11 @@ A pulse of 1ms will move the shaft anticlockwise at -90 degree, a pulse of 1.5ms
 For implement this project ESP32Servo library should be installed. Click here to download ESP32Servo library. Then install the library for Arduino IDE.
 Follow these steps to install ESP32Servo library.
  
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/Servo/1step.png?raw=true
+
 Figure 10: Iclude library -> Add.ZIP library
+
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/Servo/Screenshot_1.png?raw=true
  
 Figure 11: Select ZIP file
 
@@ -344,6 +366,11 @@ A motion sensor (or motion detector) is an electronic device that is designed to
 ------------
 
 When a human or animal body will get in the range of the sensor, it will detect a movement because the human or animal body emits heat energy in a form of infrared radiation. That is where the name of the sensor comes from, a Passive Infra-Red sensor. In addition, the term “passive” means that sensor is not using any energy for detecting purposes; it just works by detecting the energy given off by the other objects.
+
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/MotionSensor/Screenshot_3.png?raw=true
+
+Figure 12: PIR Sensor –Howtomechatronics.com
+
 
 6.4 Methodology
 ---------------
@@ -458,6 +485,10 @@ Adafruit NeoPixel library is for LED strips. However, it can be used for single 
 There are actually, two different types of Hall sensors one is Digital Hall sensor and the other is Analog Hall sensor. The digital Hall sensor can only detect if a magnet is present or not (0 or 1) but an analog hall sensor’s output varies based on the magnetic field around the magnet that is it can detect how strong or how far the magnet is. In this project will aim only at the digital Hall sensors for they are the most commonly used ones. [6]
 
 In a Hall Effect sensor, a thin strip of metal has a current applied along it. In the presence of a magnetic field, the electrons in the metal strip are deflected toward one edge, producing a voltage gradient across the short side of the strip (perpendicular to the feed current). 
+
+.. image:: https://github.com/HarshaWeerasinghe/MagicBit_Sensors/blob/master/resources/hall%20sensor/Screenshot_1.png?raw=true
+
+Figure 13: Hall Effect Sensor (Magnetic Sensor)
 
 8.4 Methodology
 ----------------
