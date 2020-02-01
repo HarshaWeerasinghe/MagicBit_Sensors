@@ -725,22 +725,15 @@ A proximity sensor is a sensor able to detect the presence of nearby objects wit
 1.5 Coding
 -----------
 .. code-block:: c
-
-const int IRpin = 32;
-
-void setup() {
-  Serial.begin(9600);
-
-  pinMode (IRpin, INPUT);
-
-}
-void loop() {
-
-  Serial.println(analogRead(IRpin));
-
-  delay(100);
-
-}
+	const int IRpin = 32;
+	void setup() {
+  	Serial.begin(9600);
+  	pinMode (IRpin, INPUT);
+	}
+	void loop() {
+  	Serial.println(analogRead(IRpin));
+  	delay(100);
+	}
 
 **Outputs: Serial monitor**
 
